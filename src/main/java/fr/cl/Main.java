@@ -24,7 +24,11 @@ public class Main {
             calendrier.setAnneeInput(Integer.parseInt(args[0]));
         }
 
-        calendrier.setListeAnnees();
+        try {
+            calendrier.setListeAnnees();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         calendrier.editListeAnnees();
         System.out.println(calendrier.getAnneeInput());
 

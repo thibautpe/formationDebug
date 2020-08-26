@@ -28,7 +28,7 @@ class Calendrier {
         this.anneeInput = anneeInput;
     }
 
-    public void setListeAnnees() {
+    public void setListeAnnees() throws Exception {
         for (int i = 1; i <= anneeInput; i++) {
             Annee anneeTemp = new Annee(i);
             this.listeAnnees.add(anneeTemp);

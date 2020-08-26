@@ -4,7 +4,10 @@ public class Annee {
     private int id;
     private boolean isBissextile;
 
-    public Annee(int id) {
+    public Annee(int id) throws Exception {
+        if (id < 0) {
+            throw (new Exception("L'année ne peut etre négative !"));
+        }
         this.setId(id);
         this.setBissextile();
 

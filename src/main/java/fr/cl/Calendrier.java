@@ -12,7 +12,11 @@ class Calendrier {
     private int anneeInput;
     private List<Annee> listeAnnees = new ArrayList<>();
 
-    public Calendrier(int anneeInput) {
+    public Calendrier(int anneeInput) throws Exception {
+
+        if (anneeInput < 0) {
+            throw (new Exception("L'année ne peut être négative !"));
+        }
         this.anneeInput = anneeInput;
     }
 
@@ -24,7 +28,10 @@ class Calendrier {
         return anneeInput;
     }
 
-    public void setAnneeInput(int anneeInput) {
+    public void setAnneeInput(int anneeInput) throws Exception {
+        if (anneeInput < 0) {
+            throw (new Exception("L'année ne peut être négative !"));
+        }
         this.anneeInput = anneeInput;
     }
 

@@ -6,7 +6,7 @@ public class Annee {
 
     public Annee(int id) throws Exception {
         if (id < 0) {
-            throw (new Exception("L'année ne peut etre négative !"));
+            throw (new Exception("L'année ne peut être négative !"));
         }
         this.setId(id);
         this.setBissextile();
